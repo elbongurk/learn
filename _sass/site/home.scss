@@ -1,0 +1,42 @@
+#latest-issue {
+  article {
+    padding-top: 18px;
+    padding-bottom: 36px;
+    border-bottom: 2px solid $silver;
+    overflow: hidden;
+    .hero {
+      fill: rgba(0,0,0,0.5);
+      margin: 36px 0px 8px 24px;
+      float: right;
+      width: 25%;
+      max-height: 350px;
+      @media (min-width: $medium-screen) {
+        margin-top: 24px;
+      }
+    }
+    .excerpt {
+      max-width: 500px;
+      header {
+        .label {
+          @media (min-width: $medium-screen) {
+            margin-top: 24px;
+          }
+        }
+        h1 {
+          a {
+            color: $white;
+          }
+          @media (min-width: $medium-screen) {
+            font-size: 32px;
+          }
+        }
+      }
+      p {
+        @media (min-width: $medium-screen) {
+          font-size: 18px;
+        }
+      } 
+    }
+  }
+}
+

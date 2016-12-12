@@ -1,0 +1,16 @@
+---
+layout: xml
+---
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml"/>
+    <title>{{ site.title }}</title>
+    <description>{{ site.description | strip_html }}</description>
+    <link>{{ site.url }}</link>
+    <language>{{ site.lang }}</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <pubDate>{{ site.issues.last.date | date_to_rfc822 }}</pubDate>
+    {{ content }}
+  </channel>
+</rss>

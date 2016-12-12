@@ -1,0 +1,10 @@
+@include font-face('Merriweather', '../font/merriweather-v8-latin-regular');
+@include font-face('Merriweather', '../font/merriweather-v8-latin-italic', normal, italic);
+@include font-face('Merriweather', '../font/merriweather-v8-latin-700', bold);
+@include font-face('Merriweather', '../font/merriweather-v8-latin-700italic', bold, italic);
+
+@include font-face('Work Sans', '../font/work-sans-v2-latin-200', 200);
+@include font-face('Work Sans', '../font/work-sans-v2-latin-300', 300);
+@include font-face('Work Sans', '../font/work-sans-v2-latin-500', 500);
+@include font-face('Work Sans', '../font/work-sans-v2-latin-600', 600);
+@include font-face('Work Sans', '../font/work-sans-v2-latin-700', 700);

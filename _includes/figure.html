@@ -1,0 +1,41 @@
+{% assign length = include.lesson | size %}
+{% assign pad = 2 | minus: length %}
+{% if pad > 0 %}
+{% assign lesson = include.lesson | prepend: '0' %}
+{% else %}
+{% assign lesson = include.lesson %}
+{% endif %}
+
+{% assign length = include.figure | size %}
+{% assign pad = 2 | minus: length %}
+{% if pad > 0 %}
+{% assign figure = include.figure | prepend: '0' %}
+{% else %}
+{% assign figure = include.figure %}
+{% endif %}
+
+{% if page.ebook %}
+<div class="figure">
+{% else %}
+<figure>
+{% endif %}
+  {% case include.type %}
+  {% when "video" %}
+  <video controls poster="{% unless page.ebook %}/assets/{% endunless %}figs/{{ lesson }}-{{ figure }}.jpg">
+    <source src="{% unless page.ebook %}/assets/{% endunless %}figs/{{ lesson }}-{{ figure }}.mp4" type="video/mp4" />
+  </video>
+  {% when "animation" %}
+  <img src="{% unless page.ebook %}/assets/{% endunless %}figs/{{ lesson }}-{{ figure }}.gif" />
+  {% when "picture" %}
+  <img src="{% unless page.ebook %}/assets/{% endunless %}figs/{{ lesson }}-{{ figure }}.png" />
+  {% endcase %}
+  {% if page.ebook %}
+  <div class="figcaption">fig. {{ include.figure }}</div>
+  {% else %}
+  <figcaption>fig. {{ include.figure }}</figcaption>
+  {% endif %}
+{% if page.ebook %}
+</div>
+{% else %}
+</figure>
+{% endif %}

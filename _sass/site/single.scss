@@ -1,0 +1,325 @@
+#single  {
+  margin-bottom: 36px;
+  header {
+    padding-top: 18px;
+    padding-bottom: 36px;
+    margin-bottom: 32px;
+    time {
+      display: block;
+      font-size: 14px;
+      color: $white;
+      line-height: 1;
+      margin-top: 4px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      color: $white;
+      font-size: 24px;
+      font-weight: 200;
+      margin-bottom: 72px;
+      @media (min-width: $medium-screen) {
+        font-size: 32px;
+      }
+      @media (min-width: $x-large-screen) {
+        font-size: 48px;
+        margin-bottom: 128px;
+      }
+    }
+    .attribute {
+      margin-bottom: 0;
+    }    
+  }
+  .content {
+    margin-bottom: 80px;
+    h1 {
+      font-size: 32px;
+      font-weight: 300;
+    }
+    h2, h3, h4, h5, h6 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    ul {
+      list-style-type: disc;
+    }
+    ol {
+      list-style-type: decimal;
+    }
+    ul, ol {
+      margin-bottom: 1em;
+      margin-left: 40px;      
+    }
+    ul ul, ol ol {
+      margin-bottom: 0;      
+    }
+    pre, figure {
+      margin-left: 0;
+      margin-right: 0;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      clear: both;
+    }
+    pre, figure {
+      background-color: #f8f8f8;
+    }
+    code {
+      padding-top: 0.1em;
+      padding-bottom: 0.1em;
+      background-color: #f5f5f5;
+      &:before {
+        letter-spacing: -0.3em;
+        content: "\00a0";
+      }
+      &:after {
+        letter-spacing: -0.3em;
+        content: "\00a0";
+      }
+    }
+    pre code {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: transparent;
+      &:before {
+        letter-spacing: 0;
+        content: "";
+      }
+      &:after {
+        letter-spacing: 0;
+        content: "";
+      }
+    }
+    figure {
+      text-align: center;
+    }
+    figcaption {
+      font-style: italic;
+      font-size: 12px;
+    }
+    & > {
+      h1, h2, h3, h4, h5, h6, figure img, figure figcaption, div pre code {
+        display: block;
+        max-width: $max-width;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 12px;
+        padding-right: 12px;
+        @media (min-width: $medium-screen) {
+          padding-left: 24px;
+          padding-right: 24px;        
+        }
+        @media (min-width: $large-screen) {
+          padding-left: 45px;
+          padding-right: 45px;
+        }
+      }
+      figure img {
+        max-width: 100%;
+        @media (min-width: $max-width) {
+          max-width: $max-width;
+        }
+      }
+      p, ul, ol, dl, table, form {
+        max-width: 600px;
+        padding-left: 12px;
+        padding-right: 12px;
+        @media (min-width: $medium-screen) {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+        @media (min-width: $large-screen) {
+          padding-left: 45px;
+          padding-right: 45px;
+        }
+        @media (min-width: $max-width) {
+          max-width: $max-width;
+          margin-left: auto;
+          margin-right: auto;
+          padding-right: $max-width - 600px + 45px;
+        }
+      }
+      ul, ol {
+        @media (min-width: $max-width) {
+          padding-left: 85px;
+        }
+      }
+      table {
+        display: block;
+      }
+    }
+    #markdown-toc {
+      max-width: none;
+      list-style: none;
+      padding: 24px;
+      margin-left: 12px;
+      margin-right: 12px;
+      border: 1px solid $silver;
+      border-radius: 3px;
+      &:before {
+        content: "In this lesson";
+        border-bottom: 1px solid $silver;
+        display: block;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      ul {
+        list-style: none;
+        border-left: 1px dotted $silver;
+        padding-left: 24px;
+        margin-left: 0;
+      }
+      li {
+        margin: 8px 0;
+      }
+      @media (min-width: $medium-screen) {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+    }
+    blockquote {
+      font-size: 12px;
+    }
+    #markdown-toc, blockquote {
+      @media (min-width: $large-screen) {
+        float: right;
+        clear: right;
+        width: 350px;
+        margin-right: 45px;
+      }
+      @media (min-width: $max-width) {
+        @include calc(margin-right, "45px + (100% - #{$max-width}) / 2");
+      }
+    }
+  }
+  .feedback {
+    margin-bottom: 50px;
+    font-size: 12px;
+    max-width: 600px;
+    padding-left: 12px;
+    padding-right: 12px;
+    @media (min-width: $medium-screen) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    @media (min-width: $large-screen) {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+    @media (min-width: $max-width) {
+      max-width: $max-width;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: $max-width - 600px + 45px;
+    }
+    &-email {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      margin-bottom: 0;
+      padding: 8px;
+      font-weight: bold;
+      border-radius: 3px 3px 0 0;
+    }
+    &-github {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-top: 1px solid #fff;
+      padding: 8px;
+      color: #767676;
+      border-radius: 0 0 3px 3px;
+    }
+  }
+  .paging {
+    @include clearfix;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    &-prev {
+      float: left;
+      padding-right: 8px;
+      & a:before {
+        content: "\2190  ";
+      }
+      & a:after {
+        content: "Previous";
+        @media (min-width: $medium-screen) {
+          content: "";
+        }
+      }
+    }
+    &-next {
+      float: right;
+      padding-left: 8px;
+      & a:before {
+        content: "Next";
+        @media (min-width: $medium-screen) {
+          content: "";
+        }
+      }
+      & a:after {
+        content: " \2192";
+      }
+    }
+    a span {
+      display: none;
+      @media (min-width: $medium-screen) {
+        display: inline;
+      }
+    }
+    @media (min-width: $medium-screen) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+#upsell {
+  @include clearfix;
+  background: $olive;
+  color: $white;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  .wrapper {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+  .call-to-action:hover {
+    color: $olive;
+  }
+  .upsell-book {    
+    margin-bottom: 24px;
+    @media (min-width: $large-screen) {
+      float: left;
+      width: 50%;
+    }
+  }
+  .upsell-newsletter {
+    .confirmation {
+      display: none;
+      font-style: italic;
+    }
+    .success .confirmation-success,
+    .error .confirmation-error {
+      display: block;
+      @include animation(fadeIn 0.3s ease-in);
+    }
+    input {
+      -webkit-appearance: none;
+      border-radius: 0;
+      padding-left: 0;
+      background: none;
+      box-shadow: none;
+      border: 0;
+      border-bottom: 1px solid $white;
+      @include placeholder {
+        color: lighten($olive, 20);
+      }
+    }
+    .success input {
+      display: none;
+    }
+    @media (min-width: $large-screen) {
+      float: left;
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+---
+title: Articles
+layout: archive
+id: /issues
+permalink : /issues/
+---
+
+{% assign issues = site.issues | reverse %}
+
+<header role="heading" class="issue-all issue-all-hero">
+  <div role="container">
+    <h1 class="title" itemprop="name">{{ page.title }}</h1>
+    <div class="attribute">Written by Elbongurk</div>
+  </div>
+</header>
+<div role="container">
+  {% for issue in issues %}
+  <article>
+    <div class="number">#{{ issue.issue }}</div>
+    <h2><a href="{{ issue.url }}">{{ issue.title | camel_break }}</a></h2>
+    <div class="meta">
+      <time class="meta-time" datetime="{{ issue.date | date_to_xmlschema }}" itemprop="datePublished">{{ issue.date | date: "%B %-d, %Y" }}</time>
+      <div class="meta-author">{{ issue.author }}</div>
+    </div>
+    <p>{{ issue.excerpt | markdownify }}</p>
+  </article>
+  {% endfor %}
+</div>

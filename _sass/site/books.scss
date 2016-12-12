@@ -1,0 +1,31 @@
+.book-web-design {
+  color: $black;
+  background: $olive;
+  .call-to-action:hover {
+    color: $olive;
+  }
+  .breadcrumb {
+    a:hover, strong {
+      color: $yellow;
+    }
+  }
+  &-hero {
+    border-top: 1px solid lighten($olive, 30%);
+  }
+}
+
+.book-print-production {
+  color: $white;
+  background: $maroon;
+  .call-to-action:hover {
+    color: $maroon;
+  }
+  .breadcrumb {
+    a:hover, strong {
+      color: $orange;
+    }
+  }
+  &-hero {
+    border-top: 1px solid lighten($maroon, 30%);
+  }
+}

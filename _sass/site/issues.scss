@@ -1,0 +1,15 @@
+.issue-all {
+  background: $blue;
+  color: $white;
+  .call-to-action:hover {
+    color: $blue;
+  }
+  .breadcrumb {
+    a:hover, strong {
+      color: $yellow;
+    }
+  }
+  &-hero {
+    border-top: 1px solid lighten($blue, 30%);
+  }
+}

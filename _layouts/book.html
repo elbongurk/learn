@@ -1,0 +1,27 @@
+---
+layout: archive
+---
+
+{% assign book    = page %}
+{% assign author  = site.authors | where:"name",book.author | first %}
+{% assign lessons = site.lessons | where:"book",book.name | sort:"lesson" %}
+
+<header role="heading" class="book-{{ book.name }} book-{{ book.name }}-hero">
+  <div role="container">
+    <h1 class="title" itemprop="name">{{ book.title | camel_break }}</h1>
+    <div class="attribute">Written by Elbongurk</div>
+  </div>
+</header>
+<div role="container">
+  <h2 class="archive-heading">Table of Contents</h2>
+  {% for lesson in lessons %}
+  <article>
+    <div class="number">#{{ lesson.lesson }}</div>
+    <h2><a href="{{ lesson.url }}">{{ lesson.title | camel_break }}</a></h2>
+    <div class="meta">
+      <div class="meta-time">{{ lesson.content | number_of_words | divided_by:180 }} minute read</div>
+    </div>
+    <p>{{ lesson.excerpt | markdownify }}</p>
+  </article>
+  {% endfor %}
+</div>

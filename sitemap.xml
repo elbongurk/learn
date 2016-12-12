@@ -1,0 +1,38 @@
+---
+layout: xml
+---
+
+{% assign issues  = site.issues | sort:"issue" %}
+{% assign books   = site.books  | sort:"book" %}
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url }}</loc>
+    <lastmod>{{ issues.last.date | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% for issue in issues reversed %}
+  <url>
+    <loc>{{ site.url }}{{ issue.url }}</loc>
+    <lastmod>{{ issue.date | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  {% endfor %}
+  {% for book in books reversed %}
+  <url>
+    <loc>{{ site.url }}{{ book.url }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% assign lessons = site.lessons | where:"book",book.name | sort:"book" %}
+  {% for lesson in lessons %}
+  <url>
+    <loc>{{ site.url }}{{ lesson.url }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {% endfor %}
+  {% endfor %}
+</urlset>

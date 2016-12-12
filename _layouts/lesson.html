@@ -1,0 +1,68 @@
+---
+layout: single
+---
+
+{% assign lesson = page %}
+{% assign book   = site.books | where:"name",lesson.book | first %}
+{% assign lessons = site.lessons | where:"book",book.name | sort:"lesson" %}
+{% assign author = site.authors | where:"name",book.author | first %}
+
+<header role="heading" class="book-{{ book.name }} book-{{ book.name }}-hero">
+  <div role="container">
+    <nav class="breadcrumb">
+      <a href="{{ book.url }}">Table of Contents</a> /
+      <strong>Lesson #{{ lesson.lesson }}</strong>
+    </nav>
+    <h1 class="title" itemprop="name">{{ book.title | camel_break }}</h1>
+    <div class="attribute">By {{ author.name }}</div>
+  </div>
+</header>
+<div class="paging">
+  <div role="container">
+    {% assign last_lesson_index = lessons.size | minus:1 %}
+    {% for i in (0..last_lesson_index) %}
+      {% if lessons[i] == lesson %}
+        {% if i != 0 %}
+          {% assign prev = i | minus:1 %}
+          <div class="paging-prev"><a href="{{ lessons[prev].url }}"><span>{{ lessons[prev].title }}</span></a></div>
+        {% else %}
+          <div class="paging-prev"><a href="{{ book.url }}"><span>Table of Contents</span></a></div>
+        {% endif %}
+        {% if i != last_lesson_index %}
+          {% assign next = i | plus:1 %}
+          <div class="paging-next"><a href="{{ lessons[next].url }}"><span>{{ lessons[next].title }}</span></a></div>
+        {% else %}
+          <div class="paging-next"><a href="{{ book.url }}"><span>Table of Contents</span></a></div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+<div class="content" itemprop="articleBody">
+  {{ content }}
+</div>
+<div class="feedback">
+  <p class="feedback-email">Have feeedback on this lesson? Let us know at <a href="mailto:hello@elbongurk.com?subject={{ lesson.title | uri_escape }}">hello@elbongurk.com</a>.</p>
+  <p class="feedback-github">Found a bug? Suggest an <a href="{{ site.github }}/blob/master/{{ page.relative_path }}">edit on Github</a>.</p>
+</div>
+<div class="paging">
+  <div role="container">
+    {% assign last_lesson_index = lessons.size | minus:1 %}
+    {% for i in (0..last_lesson_index) %}
+      {% if lessons[i] == lesson %}
+        {% if i != 0 %}
+          {% assign prev = i | minus:1 %}
+          <div class="paging-prev"><a href="{{ lessons[prev].url }}"><span>{{ lessons[prev].title }}</span></a></div>
+        {% else %}
+          <div class="paging-prev"><a href="{{ book.url }}"><span>Table of Contents</span></a></div>
+        {% endif %}
+        {% if i != last_lesson_index %}
+          {% assign next = i | plus:1 %}
+          <div class="paging-next"><a href="{{ lessons[next].url }}"><span>{{ lessons[next].title }}</span></a></div>
+        {% else %}
+          <div class="paging-next"><a href="{{ book.url }}"><span>Table of Contents</span></a></div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,24 @@
+---
+title: Elbongurk Learn
+---
+
+{% assign issue_new = site.issues.last %}
+
+<section id="latest-issue" class="issue-all issue-all-hero">
+  <article>
+    <div role="container">
+      <figure class="hero">
+        {% include {{ issue_new.figure }} %}
+      </figure>
+      <div class="excerpt">
+        <header>
+          <small class="label">Latest Article</small>
+          <h1><a href="{{ issue_new.url }}">{{ issue_new.title | camel_break }}</a></h1>      
+        </header>
+        {{ issue_new.excerpt | markdownify }}
+        <p class="attribute">By {{ issue_new.author }}</p>
+        <p><a class="call-to-action" href="{{ issue_new.url }}">Continue Reading</a></p>
+      </div>
+    </div>
+  </article>
+</section>

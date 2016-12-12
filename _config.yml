@@ -1,0 +1,54 @@
+lang: en-US
+
+title: Elbongurk Learn
+description: "Books and weekly articles discussing various topics in graphic design."
+url: http://learn.elbongurk.com
+timezone: America/Chicago
+
+github: https://github.com/elbongurk/learn
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  toc_levels: 1..3
+  syntax_highlighter: rouge
+
+exclude: ['CNAME', 'RakeFile', 'Gemfile', 'Gemfile.lock', '_ebook', 'artwork']
+
+collections:
+  issues:
+    output: true
+    permalink: /issues/:path/
+  books:
+    output: true
+    permalink: /books/:path/
+  lessons:
+    output: true
+    permalink: /books/:path/
+  authors:
+    output: false
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "issues"
+    values:
+      layout: "issue"
+  -
+    scope:
+      path: ""
+      type: "books"
+    values:
+      layout: "book"
+  -
+    scope:
+      path: ""
+      type: "lessons"
+    values:
+      layout: "lesson"

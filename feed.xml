@@ -1,0 +1,19 @@
+---
+layout: rss
+---
+
+{% assign issues = site.issues | sort "issue" %}
+
+{% for issue in issues reversed limit: 25 %}
+{% assign author = site.authors | where:"name",issue.author | first %}
+<item>
+  <title>{{ issue.title | replace:'<br/>',' ' | xml_escape }}</title>
+  <description>{{ issue.content | xml_escape }}</description>
+  {% if author %}
+  <author>{{ author.email }} ({{ author.name }})</author>
+  {% endif %}
+  <pubDate>{{ issue.date | date_to_rfc822 }}</pubDate>
+  <link>{{ site.url }}{{ issue.url }}</link>
+  <guid isPermaLink="true">{{ site.url }}{{ issue.url }}</guid>
+</item>
+{% endfor %}

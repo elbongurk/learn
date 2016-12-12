@@ -1,0 +1,24 @@
+---
+layout: single
+---
+
+{% assign issue  = page %}
+{% assign author = site.authors | where:"name",issue.author | first %}
+
+<header role="heading" class="issue-all issue-all-hero">
+  <div role="container">
+    <nav class="breadcrumb">
+      <strong>Article {{ issue.issue }}</strong>
+    </nav>
+    <time datetime="{{ issue.date | date_to_xmlschema }}" itemprop="datePublished">{{ issue.date | date: "%B %-d, %Y" }}</time>
+    <h1 class="title" itemprop="name">{{ issue.title | camel_break }}</h1>
+    <div class="attribute">By {{ author.name }}</div>
+  </div>
+</header>
+<div class="content" itemprop="articleBody">
+  {{ content }}
+</div>
+<div class="feedback">
+  <p class="feedback-email">Have feeedback on this article? Let us know at <a href="mailto:hello@elbongurk.com?subject={{ issue.title | uri_escape }}">hello@elbongurk.com</a>.</p>
+  <p class="feedback-github">Found a bug? Suggest an <a href="{{ site.github }}/blob/master/{{ page.relative_path }}">edit on Github</a>.</p>
+</div>
