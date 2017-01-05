@@ -27,7 +27,7 @@ Organization is super important and we want to make sure we are set up for succe
 
 For this lesson, I’ve included some files that we will use to build our webpage.
 
-1. Download the Lesson03 images from [here](http://hashtagcheese.com/L3-images.zip). You’ll notice that there are three images: image01.png, image02.png, and image03.png.
+1. Download the Lesson03 images from [here](http://lessons.elbongurk.com/L3-images.zip). You’ll notice that there are three images: image01.png, image02.png, and image03.png.
 2. Move these three png files inside your new “images” folder. *__(fig. 2)__*
 
 {% include figure.html type="picture" lesson="3" figure="2" %}

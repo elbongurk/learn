@@ -22,7 +22,7 @@ To get started, we'll need to create our lesson folder structure, our initial HT
 1. Create a new __Lesson12__ folder inside of Bob
 2. Now, create your __notes__ and __root__ folders
 3. Inside the root folder, create an __images__ folder and a __css__ folder
-4. __Download__ the lesson 12 resources from [here](http://hashtagcheese.com/L12-images.zip).
+4. __Download__ the lesson 12 resources from [here](http://lessons.elbongurk.com/L12-images.zip).
 5. __Move__ those images into your __images__ folder for this lesson
 
 ### HTML Setup

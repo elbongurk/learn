@@ -22,7 +22,7 @@ Let's get started. Like usual, we need to create our lesson folder structure, ou
 1. Create a new __Lesson09__ folder inside of Bob
 2. Create two subfolders: __notes__ and __root__
 3. Inside the root folder, create your __images__ folder and your __css__ folder
-4. __Download__ the lesson 09 resources from [here](http://hashtagcheese.com/L9-images.zip).
+4. __Download__ the lesson 09 resources from [here](http://lessons.elbongurk.com/L9-images.zip).
 5. __Move__ those images into your __images__ folder for this lesson
 
 ### HTML Setup

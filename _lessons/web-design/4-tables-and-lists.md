@@ -18,7 +18,7 @@ Let’s begin by creating the folders and files we'll need for this lesson.
 1. Create a new __Lesson04__ folder inside of Bob
 2. Create two subfolders: __notes__ and __root__
 3. Inside the root folder, create an __images__ folder
-4. __Download__ the lesson 4 images from [here](http://hashtagcheese.com/L4-images.zip).
+4. __Download__ the lesson 4 images from [here](http://lessons.elbongurk.com/L4-images.zip).
 5. __Move__ those images into your __images__ folder for this lesson
 6. __Open__ up TextMate 
 7. __File__ > __New__ to open a new file

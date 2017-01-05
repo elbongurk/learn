@@ -26,7 +26,7 @@ Let's create our lesson folder structure, our initial HTML file and connect it u
 1. Create a new __Lesson16__ folder inside of Bob
 2. Create the __notes__ and __root__ folders
 3. Inside the root folder, create an __images__ folder and a __css__ folder
-4. __Download__ the lesson 16 resources from [here](http://hashtagcheese.com/L16-images.zip).
+4. __Download__ the lesson 16 resources from [here](http://lessons.elbongurk.com/L16-images.zip).
 5. __Move__ those images into your __images__ folder for this lesson
 
 ### HTML Setup

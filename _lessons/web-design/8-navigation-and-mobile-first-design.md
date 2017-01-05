@@ -22,7 +22,7 @@ Let's get started. Like usual, we need to create our lesson folder structure, ou
 1. Create a new __Lesson 08__ folder inside of Bob
 2. Create two subfolders: __notes__ and __root__
 3. Inside the root folder, create two subfolders, an __images__ folder and a __css__ folder
-4. __Download__ the lesson 8 resources from [here](http://hashtagcheese.com/L8-images.zip).
+4. __Download__ the lesson 8 resources from [here](http://lessons.elbongurk.com/L8-images.zip).
 5. __Move__ those images into your __images__ folder for this lesson
 
 ### HTML Setup

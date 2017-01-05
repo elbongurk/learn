@@ -22,7 +22,7 @@ Let’s get started in our usual fashion by creating the folders and files we'll
 1. Create a new __Lesson05__ folder inside of Bob
 2. Create two subfolders: __notes__ and __root__
 3. Inside the root folder, create an __images__ folder
-4. __Download__ the lesson 5 resources from [here](http://hashtagcheese.com/L5-images.zip).
+4. __Download__ the lesson 5 resources from [here](http://lessons.elbongurk.com/L5-images.zip).
 5. __Move__ those images _(and pdf document)_ into your __images__ folder for this lesson
 6. __Open__ up TextMate 
 7. __File__ > __New__ to open a new file
@@ -197,7 +197,7 @@ Some people like to use enters and tabs to nest the `<img />` tag inside the `<a
 
 In an image link, we simply see whatever image we pointed to show up on the page as a clickable link. Here's a commonly seen example, the Facebook logo, as the image link:
 
-<a href="http://www.facebook.com"><img src="http://hashtagcheese.com/L5/facebook.png"></a>
+<a href="http://www.facebook.com"><img src="http://lessons.elbongurk.com/L5/facebook.png"></a>
 
 >    __Note:__ You'll notice the same pointing hand appear when mouse over the image link, again helping the user to know that the image is clickable.
 
